@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
   title = 'todo';
 
@@ -31,5 +30,9 @@ export class AppComponent {
       done: false
     });
   }
+
+  remove(item) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
+  }  
   
 }
